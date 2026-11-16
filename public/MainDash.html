@@ -205,7 +205,7 @@ html {
 
     <nav>
         <div class="logo"><i class="fas fa-cow"></i> LiveTrack AI</div>
-        <button onclick="alert('Logging out...')" style="background:none; border:none; color:red; cursor:pointer; font-weight:bold;">Logout</button>
+        <button type="button" onclick="alert('Logging out...')" style="background:none; border:none; color:red; cursor:pointer; font-weight:bold;">Logout</button>
     </nav>
 
     <div id="map-tooltip"></div>
@@ -219,9 +219,9 @@ html {
 
     <div class="container">
         <aside class="profile-sidebar">
-            <img src="https://ui-avatars.com/api/?name=Farmer+John&background=166534&color=fff" class="profile-img">
+            <img src="https://ui-avatars.com/api/?name=Farmer+John&background=166534&color=fff" class="profile-img" alt="Farmer John Doe">
             <h2>Farmer John Doe</h2>
-            <a href="FarmerDash.html"
+            <a href="farmerDash.html"
    style="padding: 16px 32px; font-size: 1.1rem; text-decoration: none; color:#064e3b;"
    onmouseover="this.style.textDecoration='underline'; this.style.color='#1e293b'"
    onmouseout="this.style.textDecoration='none'; this.style.color='#064e3b'">
@@ -243,7 +243,7 @@ html {
                     <i class="fas fa-search"></i>
                     <input type="text" id="mapSearch" placeholder="Search State (e.g. Bihar, Odisha)...">
                 </div>
-                <button class="filter-btn"><i class="fas fa-sliders-h"></i> Filter</button>
+                <button type="button" class="filter-btn"><i class="fas fa-sliders-h"></i> Filter</button>
             </div>
 
             <section class="hero-card reveal">
@@ -351,20 +351,6 @@ html {
         function toggleChat() {
             const win = document.getElementById('chatWindow');
             win.style.display = (win.style.display === 'flex') ? 'none' : 'flex';
-        }
-
-        function handleChat(e) {
-            if (e.key === 'Enter') {
-                const input = document.getElementById('chatInput');
-                const body = document.getElementById('chatBody');
-                if (!input.value.trim()) return;
-                body.innerHTML += `<div class="msg user">${input.value}</div>`;
-                setTimeout(() => {
-                    body.innerHTML += `<div class="msg bot">Processing your query about livestock census...</div>`;
-                    body.scrollTop = body.scrollHeight;
-                }, 600);
-                input.value = "";
-            }
         }
 
         const tooltip = document.getElementById('map-tooltip');

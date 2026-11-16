@@ -410,8 +410,8 @@
     <div class="logo">Farm<span>Tracker</span></div>
     
     <div class="btn-group">
-      <button class="btn-primary" onclick="openCard('login')">Login</button>
-      <button class="btn-secondary" onclick="openCard('signup')">Sign Up</button>
+      <button type="button" class="btn-primary" onclick="openCard('login')">Login</button>
+      <button type="button" class="btn-secondary" onclick="openCard('signup')">Sign Up</button>
     </div>
   </div>
 </div>
@@ -419,7 +419,7 @@
 <!-- MODAL CARD -->
 <div class="card-wrap" id="cardWrap">
   <div class="card">
-    <button class="close-btn" onclick="closeCard()" title="Close">✕</button>
+    <button type="button" class="close-btn" onclick="closeCard()" title="Close">✕</button>
     <div class="card-title">Welcome Back 🌾</div>
     <div class="card-sub" id="cardSub">Sign in to FarmTracker</div>
 
@@ -438,7 +438,7 @@
       <div>
         <label for="loginPass">Password</label>
         <div class="input-wrapper">
-          <input type="password" id="loginPass" placeholder="••••••••"/>
+          <input type="password" id="loginPass" autocomplete="current-password" placeholder="••••••••"/>
           <div class="eye-toggle" onclick="togglePassword('loginPass', this)" title="Toggle Password Visibility">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
           </div>
@@ -446,7 +446,7 @@
         <div class="forgot"><a href="#">Forgot Password?</a></div>
       </div>
       <div id="loginMsg" class="msg"></div>
-       <button class="btn-submit" onclick="handleLogin()">Login</button>
+       <button type="button" class="btn-submit" onclick="handleLogin()">Login</button>
     </div>
 
     <!-- Sign Up Panel -->
@@ -462,7 +462,7 @@
       <div>
         <label for="signupPass">Password</label>
         <div class="input-wrapper">
-          <input type="password" id="signupPass" placeholder="••••••••"/>
+          <input type="password" id="signupPass" autocomplete="new-password" placeholder="••••••••"/>
           <div class="eye-toggle" onclick="togglePassword('signupPass', this)" title="Toggle Password Visibility">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
           </div>
@@ -471,14 +471,14 @@
       <div>
         <label for="signupConfirmPass">Confirm Password</label>
         <div class="input-wrapper">
-          <input type="password" id="signupConfirmPass" placeholder="••••••••"/>
+          <input type="password" id="signupConfirmPass" autocomplete="new-password" placeholder="••••••••"/>
           <div class="eye-toggle" onclick="togglePassword('signupConfirmPass', this)" title="Toggle Password Visibility">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
           </div>
         </div>
       </div>
       <div id="signupMsg" class="msg"></div>
-       <button class="btn-submit" onclick="handleSignup()">Create Account</button>
+       <button type="button" class="btn-submit" onclick="handleSignup()">Create Account</button>
     </div>
 
     <div class="card-footer" id="cardFooter">
