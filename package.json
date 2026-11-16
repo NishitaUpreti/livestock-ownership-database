@@ -1,0 +1,31 @@
+{
+  "name": "livestock-ownership-database",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static livestock management web application. This manifest exists only for CI tooling; the site itself has no runtime dependencies.",
+  "scripts": {
+    "lint:html": "html-validate \"public/**/*.html\"",
+    "lint:css": "stylelint \"public/**/*.css\" \"public/**/*.html\"",
+    "lint:js": "eslint \"public/**/*.js\" \"public/**/*.html\"",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "serve": "http-server public -p 4173 -c-1 --silent",
+    "test:links": "node scripts/check-links.mjs",
+    "test:smoke": "playwright test",
+    "test": "npm run test:links && npm run test:smoke",
+    "audit": "npm audit --audit-level=high"
+  },
+  "engines": {
+    "node": "^22.22.0 || >=24.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.65.1",
+    "eslint": "10.15.0",
+    "eslint-plugin-html": "8.2.1",
+    "globals": "17.14.0",
+    "html-validate": "11.21.1",
+    "http-server": "14.1.1",
+    "postcss-html": "2.0.1",
+    "stylelint": "17.16.0"
+  }
+}

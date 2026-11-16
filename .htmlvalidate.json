@@ -1,0 +1,16 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "no-inline-style": "off",
+    "no-trailing-whitespace": "off",
+    "void-style": "off",
+    "no-autoplay": "warn",
+    "no-implicit-button-type": "error",
+    "text-content": "error",
+    "no-raw-characters": "error",
+    "wcag/h37": "error",
+    "wcag/h30": "error",
+    "autocomplete-password": "error",
+    "element-permitted-content": "error"
+  }
+}
